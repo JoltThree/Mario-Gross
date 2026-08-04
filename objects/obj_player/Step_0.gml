@@ -8,7 +8,7 @@ var up_held = keyboard_check(vk_up)
 xspd = (right_key - left_key) * move_spd
 
 //check if on ground (one pixel below mario)
-var on_ground = place_meeting(x, y + 1, obj_collision);
+on_ground = place_meeting(x, y + 1, obj_collision);
 
 //jump start
 if (up_pressed && on_ground) {

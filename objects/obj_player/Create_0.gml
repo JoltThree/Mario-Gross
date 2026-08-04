@@ -8,3 +8,6 @@ jump_grav = 0.25;  // reduced gravity while holding jump on the way up
 jump_spd = -6.4;      // initial jump velocity
 jump_cut = 0.5;     // how much upward speed gets cut if you release early
 is_jumping = false; // tracks whether we're still in the "held jump" phase
+
+//check if on ground (one pixel below mario)
+on_ground = place_meeting(x, y + 1, obj_collision);
