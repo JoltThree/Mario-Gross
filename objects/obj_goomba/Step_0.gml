@@ -4,10 +4,8 @@ if (place_meeting(x, y - 2, obj_player) && is_dead == false){
 	is_dead = true
 	alarm[0] = 1 * 60
 } else if (place_meeting(x - 1,y , obj_player) && is_dead == false){
-	audio_play_sound(snd_dead,10,false)
 	obj_player.alive = false
 }else if (place_meeting(x + 1,y , obj_player) && is_dead == false){
-	audio_play_sound(snd_dead,10,false)
 	obj_player.alive = false
 }
 if (is_dead == false){

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.6149433,
+  "duration":0.6984807,
   "exportDir":"",
   "name":"snd_goombadead",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_goombadead.mp3",
+  "soundFile":"snd_goombadead.ogg",
   "volume":1.0,
 }

@@ -6,8 +6,10 @@ if (!alive) {
         yspd = jump_spd * 1.25;
         is_jumping = true;
         instance_deactivate_layer("enemy");
+		audio_stop_sound(snd_music)
+		audio_play_sound(snd_dead,10,false)
         alarm[1] = 10;
-        alarm[0] = 60;
+        alarm[0] = 40;
     }
 
     // death hop: fall freely, no collision

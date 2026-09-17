@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.8620408,
+  "duration":0.74800456,
   "exportDir":"",
   "name":"snd_dead",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_dead.mp3",
+  "soundFile":"snd_dead.ogg",
   "volume":1.0,
 }
