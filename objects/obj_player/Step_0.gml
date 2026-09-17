@@ -1,3 +1,24 @@
+// Step event
+if (!alive) {
+    if (!dead_handled) {
+        dead_handled = true;
+        xspd = 0;
+        yspd = jump_spd * 1.25;
+        is_jumping = true;
+        instance_deactivate_layer("enemy");
+        alarm[1] = 10;
+        alarm[0] = 60;
+    }
+
+    // death hop: fall freely, no collision
+    sprite_index = spr_mariodead;
+    image_speed = 0;
+    yspd += grav;
+    y += yspd;
+    exit;
+}
+
+
 //controls
 var left_key = keyboard_check(vk_left)
 var right_key = keyboard_check(vk_right)
@@ -5,18 +26,25 @@ var up_pressed = keyboard_check_pressed(vk_up)
 var up_held = keyboard_check(vk_up)
 
 //movement
-xspd = (right_key - left_key) * move_spd
-
+if(alive == true){
+	xspd = (right_key - left_key) * move_spd
+}else if(alive == false){
+	sprite_index = spr_mariodead
+}
 //check if on ground (one pixel below mario)
 on_ground = place_meeting(x, y + 1, obj_collision);
 
 //jump start
-if (up_pressed && on_ground) {
-	audio_play_sound(snd_jump,10,false)
-    yspd = jump_spd;
-    is_jumping = true;
+if(alive == true){
+	if (up_pressed && on_ground) {
+		audio_play_sound(snd_jump,10,false)
+		yspd = jump_spd;
+		is_jumping = true;
+	}
+} else
+if(alive == false){
+	sprite_index = spr_mariodead
 }
-
 //variable gravity: lighter gravity while holding jump AND still rising
 if (is_jumping && up_held && yspd < 0) {
     yspd += jump_grav;

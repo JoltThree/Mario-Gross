@@ -1,4 +1,6 @@
 //define variables
+alive = true
+dead_handled = false;
 dir = 0 // 1 =L, 2 = R
 xspd = 0
 yspd = 0
