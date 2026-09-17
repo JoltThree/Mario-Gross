@@ -12,6 +12,7 @@ on_ground = place_meeting(x, y + 1, obj_collision);
 
 //jump start
 if (up_pressed && on_ground) {
+	audio_play_sound(snd_jump,10,false)
     yspd = jump_spd;
     is_jumping = true;
 }

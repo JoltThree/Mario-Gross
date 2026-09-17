@@ -1,10 +1,13 @@
 if (place_meeting(x, y - 1, obj_player) && is_dead == false){
+	audio_play_sound(snd_goombadead,10,false)
 	sprite_index = spr_goombadead
 	is_dead = true
 	alarm[0] = 1 * 60
 } else if (place_meeting(x - 1,y , obj_player) && is_dead == false){
+	audio_play_sound(snd_dead,10,false)
 	game_restart()
 }else if (place_meeting(x + 1,y , obj_player) && is_dead == false){
+	audio_play_sound(snd_dead,10,false)
 	game_restart()
 }
 if (is_dead == false){
@@ -25,7 +28,7 @@ if (is_dead == false){
 	}
 	x += h_speed; // Commit horizontal movement
 
-	// Ledge Detection & Turning (Optional)
+	// Ledge Detection & Turning
 	if (turn_at_ledges && place_meeting(x, y + 1, obj_collision)) {
 	    // Check if there is no ground ahead where the Goomba is walking
 	    var check_x = x + (sign(h_speed) * sprite_width / 2);
