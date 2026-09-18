@@ -12,13 +12,11 @@ if (!alive) {
             if (file_exists("mariogross.ini")) file_delete("mariogross.ini");
             global.new_game = true;
 			show_jumpscare = true;
-			audio_stop_sound(snd_music);
 			audio_play_sound(snd_dead_2, 10, false);
             alarm[2] = 1000000; // never respawn — game over instead
             alarm[0] = 40;      // reuse your old game_restart() alarm
         } else {
 			
-			audio_stop_sound(snd_music);
 			audio_play_sound(snd_dead, 10, false);
             alarm[1] = 10;  // normal checkpoint save
             alarm[2] = 40;  // normal respawn

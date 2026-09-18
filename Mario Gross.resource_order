@@ -28,6 +28,7 @@
     {"name":"snd_dead","order":5,"path":"sounds/snd_dead/snd_dead.yy",},
     {"name":"snd_goombadead","order":1,"path":"sounds/snd_goombadead/snd_goombadead.yy",},
     {"name":"snd_level","order":3,"path":"sounds/snd_level/snd_level.yy",},
+    {"name":"snd_music_2","order":9,"path":"sounds/snd_music_2/snd_music_2.yy",},
     {"name":"snd_music","order":2,"path":"sounds/snd_music/snd_music.yy",},
     {"name":"snd_troll","order":6,"path":"sounds/snd_troll/snd_troll.yy",},
     {"name":"snd_troll2","order":7,"path":"sounds/snd_troll2/snd_troll2.yy",},

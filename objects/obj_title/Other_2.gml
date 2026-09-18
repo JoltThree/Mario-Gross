@@ -24,6 +24,7 @@ if(file_exists("mariogross.ini"))
 	global.start_x = ini_read_real("Save1", "x", 159)
 	global.start_y = ini_read_real("Save1", "y", 161)
 	global.Vidas = ini_read_real("Save1", "lives", 3)
+	obj_mus.song = ini_read_real("Save1", "song", snd_music)
 	ini_close()
 }
 else

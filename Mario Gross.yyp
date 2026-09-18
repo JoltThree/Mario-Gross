@@ -51,6 +51,7 @@
     {"id":{"name":"snd_goombadead","path":"sounds/snd_goombadead/snd_goombadead.yy",},},
     {"id":{"name":"snd_jump","path":"sounds/snd_jump/snd_jump.yy",},},
     {"id":{"name":"snd_level","path":"sounds/snd_level/snd_level.yy",},},
+    {"id":{"name":"snd_music_2","path":"sounds/snd_music_2/snd_music_2.yy",},},
     {"id":{"name":"snd_music","path":"sounds/snd_music/snd_music.yy",},},
     {"id":{"name":"snd_troll","path":"sounds/snd_troll/snd_troll.yy",},},
     {"id":{"name":"snd_troll2","path":"sounds/snd_troll2/snd_troll2.yy",},},

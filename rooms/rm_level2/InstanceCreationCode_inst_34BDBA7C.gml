@@ -1,0 +1,1 @@
+song = snd_music_2;

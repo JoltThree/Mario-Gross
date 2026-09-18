@@ -13,5 +13,6 @@ if place_meeting(x, y, obj_player)
     ini_write_real("Save1", "y", obj_player.y)
     ini_write_real("Save1", "facing", obj_player.dir)
     ini_write_real("Save1", "lives", global.Vidas)
+    ini_write_real("Save1", "song", obj_mus.song)
     ini_close()
 }
