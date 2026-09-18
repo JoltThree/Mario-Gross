@@ -1,0 +1,1 @@
+global.Vidas = 3;

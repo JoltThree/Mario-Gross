@@ -6,13 +6,26 @@ if (!alive) {
         yspd = jump_spd * 1.25;
         is_jumping = true;
         instance_deactivate_layer("enemy");
-		audio_stop_sound(snd_music)
-		audio_play_sound(snd_dead,10,false)
-        alarm[1] = 10;
-        alarm[0] = 40;
+
+        if (global.Vidas <= 0) {
+            // out of lives: this is the death hop before game over
+            if (file_exists("mariogross.ini")) file_delete("mariogross.ini");
+            global.new_game = true;
+			show_jumpscare = true;
+			audio_stop_sound(snd_music);
+			audio_play_sound(snd_dead_2, 10, false);
+            alarm[2] = 1000000; // never respawn — game over instead
+            alarm[0] = 40;      // reuse your old game_restart() alarm
+        } else {
+			
+			audio_stop_sound(snd_music);
+			audio_play_sound(snd_dead, 10, false);
+            alarm[1] = 10;  // normal checkpoint save
+            alarm[2] = 40;  // normal respawn
+        }
     }
 
-    // death hop: fall freely, no collision
+    // death hop: fall freely, no collision — runs every frame regardless
     sprite_index = spr_mariodead;
     image_speed = 0;
     yspd += grav;

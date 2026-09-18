@@ -1,4 +1,6 @@
 //define variables
+jumpscare_timer = 0;
+show_jumpscare = false;
 alive = true
 dead_handled = false;
 dir = 0 // 1 =L, 2 = R

@@ -1,12 +1,15 @@
-if (place_meeting(x, y - 2, obj_player) && is_dead == false){
+if (place_meeting(x - 0, y - 5, obj_player) && is_dead == false && obj_player.alive == true){
 	audio_play_sound(snd_goombadead,10,false)
+	obj_player.yspd = obj_player.jump_spd*1.15
 	sprite_index = spr_goombadead
 	is_dead = true
 	alarm[0] = 1 * 60
-} else if (place_meeting(x - 1,y , obj_player) && is_dead == false){
+} else if (place_meeting(x - 1,y , obj_player) && is_dead == false && obj_player.alive == true){
 	obj_player.alive = false
-}else if (place_meeting(x + 1,y , obj_player) && is_dead == false){
+	global.Vidas -= 1
+}else if (place_meeting(x + 1,y , obj_player) && is_dead == false && obj_player.alive == true){
 	obj_player.alive = false
+	global.Vidas -= 1
 }
 if (is_dead == false){
 	// Apply gravity if not on the ground
